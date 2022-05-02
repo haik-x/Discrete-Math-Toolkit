@@ -552,9 +552,9 @@ class Ui_Conjuntos(object):
             self.opcion = 2
             self.open_plot(self.conjunto1, self.conjunto2, self.conjunto3, self.operacion, self.opcion)
 
-'''
 
-if __name__ == "__main__":
+
+'''if __name__ == "__main__":
     import sys
 
     app = QtWidgets.QApplication(sys.argv)
@@ -562,6 +562,4 @@ if __name__ == "__main__":
     ui = Ui_Conjuntos()
     ui.setupUi(Conjuntos)
     Conjuntos.show()
-    sys.exit(app.exec_())
-
-'''
+    sys.exit(app.exec_())'''

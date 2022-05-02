@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>754</width>
+    <height>325</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>490</width>
+    <height>207</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1200</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: black;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>210</y>
+      <width>191</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: #404040;
+    color: #00f900;
+    border-style: outset;
+    padding: 2px;
+    font: bold 13px;
+    border-width: 3px;
+    border-radius: 5px;
+    border-color: #404040;
+}
+QPushButton:hover {
+    background-color:#39FF14;
+}</string>
+    </property>
+    <property name="text">
+     <string>Generar</string>
+    </property>
+    <property name="autoRepeatDelay">
+     <number>300</number>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_2">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>120</y>
+      <width>51</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">    background-color: black;
+    color: #FFFFFF;
+    border-style: groove;
+    padding: 2px;
+    font: bold 10px;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: white;</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_3">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>120</y>
+      <width>51</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">    background-color: black;
+    color: #FFFFFF;
+    border-style: groove;
+    padding: 2px;
+    font: bold 10px;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: white;</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>60</y>
+      <width>113</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">    background-color: black;
+    color: #FFFFFF;
+    border-style: groove;
+    padding: 2px;
+    font: bold 10px;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: white;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>136</x>
+      <y>60</y>
+      <width>71</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    background-color: #404040;
+    color: #FFFFFF;
+    border-style: outset;
+    padding: 2px;
+    font: bold 13px;
+    border-width: 3px;
+    border-radius: 5px;
+    border-color: #404040;
+}
+QPushButton:hover {
+    background-color:#39FF14;
+}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <property name="text">
+     <string>Fórmula:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>120</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+    background-color: #404040;
+    color: #FFFFFF;
+    border-style: outset;
+    padding: 2px;
+    font: bold 11px;
+    border-width: 3px;
+    border-radius: 5px;
+    border-color: #404040;
+}
+QPushButton:hover {
+    background-color:#39FF14;
+}</string>
+    </property>
+    <property name="text">
+     <string>Límite inferior:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>120</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+    background-color: #404040;
+    color: #FFFFFF;
+    border-style: outset;
+    padding: 2px;
+    font: bold 11px;
+    border-width: 3px;
+    border-radius: 5px;
+    border-color: #404040;
+}
+QPushButton:hover {
+    background-color:#39FF14;
+}</string>
+    </property>
+    <property name="text">
+     <string>Límite superior:</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="textEdit">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>40</y>
+      <width>251</width>
+      <height>221</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">    color: #FFFFFF;</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>754</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
