@@ -13,13 +13,12 @@ def replace_letters(expression):
 def parse(expression, n):
     return expression.replace('k', n)
 
-
-
+#Función recursiva de serie para la multiplicacion.
 def recursion_multiplication(expression, x, n):
     if x < n:
         return 1
     else:
-        return float(eval(parse(expression, str(x)))) * recursion_multiplication(expression, x-1, n)
+        return float(eval(parse(expression, str(x)))) * recursion_multiplication(expression, x - 1, n)
 
 
 class Sucesiones(QtWidgets.QMainWindow, Ui_MainWindow):
@@ -29,6 +28,7 @@ class Sucesiones(QtWidgets.QMainWindow, Ui_MainWindow):
         self.pushButton_2.clicked.connect(self.solve_series)
         self.msg = QMessageBox()
 
+    #Función recursiva de serie para la suma. Se llama dentro de la clase para poder acceder al elemento de caja de texto
     def recursion_addition(self, expression, x, n):
         if x < n:
             return 0
@@ -53,12 +53,6 @@ class Sucesiones(QtWidgets.QMainWindow, Ui_MainWindow):
         self.textEdit.insertPlainText(f'\nSuma: {str(self.sum)}\n')
         self.textEdit.insertPlainText(f'Multiplicacion: {str(self.mult)}')
 
-    '''def exit_window(self):
-        self.close()
-        self.window = QtWidgets.QMainWindow()
-        self.ui = Ui_Menu()
-        self.ui.setupUi(self.window)
-        self.window.show()'''
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
