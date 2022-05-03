@@ -1,5 +1,5 @@
 from PyQt5 import QtWidgets
-from RelacionesUI import Ui_Relaciones
+from UI_Scripts.RelacionesUI import Ui_Relaciones
 import sys
 
 class Relaciones(QtWidgets.QMainWindow, Ui_Relaciones):

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>748</width>
+    <height>245</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: black;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>30</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+    background-color: black;
+    color: #FFFFFF;
+    font: bold 15px;
+
+
+
+}</string>
+    </property>
+    <property name="text">
+     <string>Relaciones:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="inpuLine">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>70</y>
+      <width>351</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+    background-color: black;
+    color: #FFFFFF;
+    border-style: double;
+    padding: 2px;
+    font: bold 15px;
+    border-width:2px;
+    border-radius: 10px;
+    border-color: green;</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="outputBox">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>20</y>
+      <width>231</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+    background-color: black;
+    color: #FFFFFF;
+    border-style: double;
+    padding: 2px;
+    font: bold 15px;
+    border-width:2px;
+    border-color: green;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnGenerate">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>130</y>
+      <width>101</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>203</width>
+      <height>26</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	font: bold 11px;
+	border-style: inset;
+	border-width: 2px;
+    border-color: green;
+	color: #FFFFFF;
+}
+
+QPushButton::pressed
+{
+	background-color : green;
+}</string>
+    </property>
+    <property name="text">
+     <string>Generar</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>748</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

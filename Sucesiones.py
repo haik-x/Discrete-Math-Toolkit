@@ -1,6 +1,6 @@
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QMessageBox
-from SucesionesUI import Ui_MainWindow
+from UI_Scripts.SucesionesUI import Ui_MainWindow
 import sys
 import re
 
