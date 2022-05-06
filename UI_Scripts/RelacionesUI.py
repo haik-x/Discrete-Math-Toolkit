@@ -15,7 +15,8 @@ class Ui_Relaciones(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(748, 245)
-        MainWindow.setStyleSheet("background-color: black;")
+        MainWindow.setStyleSheet("background-color: black;\n"
+                                 "color:white")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.label = QtWidgets.QLabel(self.centralwidget)
@@ -29,9 +30,9 @@ class Ui_Relaciones(object):
                                  "\n"
                                  "}")
         self.label.setObjectName("label")
-        self.inpuLine = QtWidgets.QLineEdit(self.centralwidget)
-        self.inpuLine.setGeometry(QtCore.QRect(40, 70, 351, 41))
-        self.inpuLine.setStyleSheet("\n"
+        self.inputLine = QtWidgets.QLineEdit(self.centralwidget)
+        self.inputLine.setGeometry(QtCore.QRect(40, 70, 351, 41))
+        self.inputLine.setStyleSheet("\n"
                                     "    background-color: black;\n"
                                     "    color: #FFFFFF;\n"
                                     "    border-style: double;\n"
@@ -40,7 +41,7 @@ class Ui_Relaciones(object):
                                     "    border-width:2px;\n"
                                     "    border-radius: 10px;\n"
                                     "    border-color: green;")
-        self.inpuLine.setObjectName("inpuLine")
+        self.inputLine.setObjectName("inputLine")
         self.outputBox = QtWidgets.QTextEdit(self.centralwidget)
         self.outputBox.setGeometry(QtCore.QRect(470, 20, 231, 171))
         self.outputBox.setStyleSheet("\n"

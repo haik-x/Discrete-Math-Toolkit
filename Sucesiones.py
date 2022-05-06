@@ -34,7 +34,6 @@ class Sucesiones(QtWidgets.QMainWindow, Ui_MainWindow):
             return 0
         else:
             self.textEdit.insertPlainText(f'{parse(expression, str(x))}: {float(eval(parse(expression, str(x))))}\n')
-            print(f'{parse(expression, str(x))}: {float(eval(parse(expression, str(x))))}')
             return float(eval(parse(expression, str(x)))) + self.recursion_addition(expression, x - 1, n)
 
     def solve_series(self):

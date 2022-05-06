@@ -1,4 +1,5 @@
 from PyQt5 import QtWidgets
+from PyQt5.QtCore import pyqtSignal
 from UI_Scripts.MenuUI import Ui_Menu
 from UI_Scripts.ConjuntosUI import Ui_Conjuntos
 from TruthCalculator import Ui_MainWindow
@@ -7,6 +8,7 @@ from Relaciones import Relaciones
 import sys
 
 class Menu(QtWidgets.QMainWindow, Ui_Menu):
+
     def __init__(self):
         super().__init__()
         self.setupUi(self)
@@ -36,6 +38,15 @@ class Menu(QtWidgets.QMainWindow, Ui_Menu):
         self.relaciones = Relaciones()
         self.hide()
         self.relaciones.show()
+        self.relaciones.closing.connect(self.do_something)
+
+
+
+    def do_something(self):
+        self.show()
+
+
+
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
