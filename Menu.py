@@ -1,7 +1,7 @@
 from PyQt5 import QtWidgets
 from PyQt5.QtCore import pyqtSignal
 from UI_Scripts.MenuUI import Ui_Menu
-from UI_Scripts.ConjuntosUI import Ui_Conjuntos
+from Conjuntos import Conjuntos
 from TruthCalculator import Ui_MainWindow
 from Sucesiones import Sucesiones
 from Relaciones import Relaciones
@@ -18,10 +18,9 @@ class Menu(QtWidgets.QMainWindow, Ui_Menu):
         self.pushButton_4.clicked.connect(self.open_relaciones)
 
     def open_conjuntos(self):
-        self.window = QtWidgets.QMainWindow()
-        self.ui = Ui_Conjuntos()
-        self.ui.setupUi(self.window)
-        self.window.show()
+        self.conjuntos = Conjuntos()
+        self.hide()
+        self.conjuntos.show()
 
     def open_truth(self):
         self.window = QtWidgets.QMainWindow()

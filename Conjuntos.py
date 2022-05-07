@@ -11,6 +11,9 @@ class Conjuntos(QtWidgets.QMainWindow, Ui_Conjuntos):
         self.radioButton.clicked.connect(self.check)
         self.radioButton_2.clicked.connect(self.check)
         self.btnUnion.clicked.connect(self.clicked_union)
+        self.btnIntersection.clicked.connect(self.clicked_intersection)
+        self.btnSymmetry.clicked.connect(self.clicked_symmetric)
+        self.btnDifference.clicked.connect(self.clicked_difference)
 
     # Funcion que llama al modulo de plot y llama a las funciones setter que tomara para graficar los conjuntos
     def open_plot(self, conjunto1, conjunto2, conjunto3, operacion, opcion):

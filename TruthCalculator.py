@@ -1,5 +1,5 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-from tablasVerdad import table_Window
+from TruthTables import Tables
 
 
 class Ui_MainWindow(object):
@@ -292,15 +292,12 @@ class Ui_MainWindow(object):
         statement = statement.replace("->", ">")
         statement = statement.replace("^", "&")
 
-        self.open_window(statement, MainWindow)
+        self.open_window(statement)
 
-    def open_window(self, statement, MainWindow):
-        self.window = QtWidgets.QMainWindow()
-        self.ui = table_Window()
-        self.ui.set_statement(statement)
-        self.ui.setupUi(self.window)
-        MainWindow.hide()
-        self.window.show()
+    def open_window(self, statement):
+        self.table = Tables(statement)
+        self.table.show()
+
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
