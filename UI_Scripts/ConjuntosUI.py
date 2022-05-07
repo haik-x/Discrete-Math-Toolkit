@@ -1,14 +1,14 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-
 class Ui_Conjuntos(object):
     def setupUi(self, Conjuntos):
         Conjuntos.setObjectName("Conjuntos")
         Conjuntos.resize(876, 554)
         Conjuntos.setMinimumSize(QtCore.QSize(0, 554))
         Conjuntos.setMaximumSize(QtCore.QSize(876, 554))
-        Conjuntos.setStyleSheet("background-color: black;")
+        Conjuntos.setStyleSheet("background-color: black;\n"
+                                "color: white;")
         self.centralwidget = QtWidgets.QWidget(Conjuntos)
         self.centralwidget.setMinimumSize(QtCore.QSize(876, 512))
         self.centralwidget.setMaximumSize(QtCore.QSize(876, 512))
@@ -431,8 +431,6 @@ class Ui_Conjuntos(object):
         self.btnIntersection.setText(_translate("Conjuntos", "Intersección"))
         self.btnDifference.setText(_translate("Conjuntos", "Diferencia"))
         self.btnSymmetry.setText(_translate("Conjuntos", "Diferencia Simétrica"))
-
-
 
 
 '''if __name__ == "__main__":

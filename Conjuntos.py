@@ -1,10 +1,13 @@
 from PyQt5 import QtWidgets
+from PyQt5.QtCore import pyqtSignal
+from PyQt5.QtWidgets import QMessageBox
 from UI_Scripts.ConjuntosUI import Ui_Conjuntos
 import Plot
 import sys
 
 
 class Conjuntos(QtWidgets.QMainWindow, Ui_Conjuntos):
+    closing = pyqtSignal()
     def __init__(self):
         super().__init__()
         self.setupUi(self)
@@ -130,6 +133,16 @@ class Conjuntos(QtWidgets.QMainWindow, Ui_Conjuntos):
             self.operacion = (self.conjunto1 ^ (self.conjunto2 ^ self.conjunto3))
             self.opcion = 2
             self.open_plot(self.conjunto1, self.conjunto2, self.conjunto3, self.operacion, self.opcion)
+
+    def closeEvent(self, event):
+        reply = QMessageBox.question(self, 'Message',
+                                     "¿Seguro que deseas salir?", QMessageBox.Yes |
+                                     QMessageBox.No, QMessageBox.No)
+        if reply == QMessageBox.Yes:
+            self.closing.emit()
+            event.accept()
+        else:
+            event.ignore()
 
 
 if __name__ == "__main__":

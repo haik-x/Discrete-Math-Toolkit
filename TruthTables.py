@@ -1,5 +1,5 @@
-from PyQt5 import QtCore, QtGui, QtWidgets
-from tablasVerdad import table_Window
+from PyQt5 import QtCore, QtWidgets
+from UI_Scripts.TruthTablesUI import table_Window
 import sys
 
 

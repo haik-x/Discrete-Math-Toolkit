@@ -1,4 +1,5 @@
 from PyQt5 import QtWidgets
+from PyQt5.QtCore import pyqtSignal
 from PyQt5.QtWidgets import QMessageBox
 from UI_Scripts.SucesionesUI import Ui_MainWindow
 import sys
@@ -22,6 +23,7 @@ def recursion_multiplication(expression, x, n):
 
 
 class Sucesiones(QtWidgets.QMainWindow, Ui_MainWindow):
+    closing = pyqtSignal()
     def __init__(self):
         super().__init__()
         self.setupUi(self)
@@ -51,6 +53,16 @@ class Sucesiones(QtWidgets.QMainWindow, Ui_MainWindow):
 
         self.textEdit.insertPlainText(f'\nSuma: {str(self.sum)}\n')
         self.textEdit.insertPlainText(f'Multiplicacion: {str(self.mult)}')
+
+    def closeEvent(self, event):
+        reply = QMessageBox.question(self, 'Message',
+                                     "¿Seguro que deseas salir?", QMessageBox.Yes |
+                                     QMessageBox.No, QMessageBox.No)
+        if reply == QMessageBox.Yes:
+            self.closing.emit()
+            event.accept()
+        else:
+            event.ignore()
 
 
 if __name__ == "__main__":

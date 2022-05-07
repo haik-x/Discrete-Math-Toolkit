@@ -17,7 +17,8 @@ class Ui_MainWindow(object):
         MainWindow.resize(754, 325)
         MainWindow.setMinimumSize(QtCore.QSize(490, 207))
         MainWindow.setMaximumSize(QtCore.QSize(1200, 600))
-        MainWindow.setStyleSheet("background-color: black;")
+        MainWindow.setStyleSheet("background-color: black;\n"
+                                 "color: white")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
